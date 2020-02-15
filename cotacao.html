@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+	
+	<script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "errorBeacon": "bam.nr-data.net",
+            "licenseKey": "5414bdcb56",
+            "applicationID": "174082801",
+            "transactionName": "NlBUZ0VRD0IFABULXg8ae2V0HyleCQYiDV8VR1lfW1UTHi0NBQdJ",
+            "queueTime": 0,
+            "applicationTime": 3,
+            "agent": "",
+            "atts": ""
+        }
+    </script>
+	
+	<script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1130.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    
+    <style>
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #bdc3c7;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background: #95a5a6;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #7f8c8d;
+	}
+    </style>
+	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Venzo</title>
+	
+	<meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Icon css link -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+	<!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Venzo">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21297055-8"></script>
+	<script src="scripts/modernizr.js"></script>
+	
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Rev slider css -->
+    <link href="vendors/revolution/css/settings.css" rel="stylesheet">
+    <link href="vendors/revolution/css/layers.css" rel="stylesheet">
+    <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+    <link href="vendors/animate-css/animate.css" rel="stylesheet">
+    <link href="vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Extra plugin css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+<script type="text/javascript">
+/* Máscaras ER */
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+function mtel(v){
+    v=v.replace(/D/g,"");             //Remove tudo o que não é dígito
+    v=v.replace(/^(d{2})(d)/g,"($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v=v.replace(/(d)(d{4})$/,"$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    return v;
+}
+function id( el ){
+	return document.getElementById( el );
+}
+window.onload = function(){
+	id('telefone').onkeypress = function(){
+		mascara( this, mtel );
+	}
+}
+</script>
+	
+</head>
+<body>
+
+
+<!--================Header Area =================-->
+<header class="main_header_area">
+    <div class="header_top_area">
+        <div class="container">
+            <div class="pull-left">
+                <a><i class="fa fa-phone"></i>(19) 3929-9801</a>
+                <a><i class="fa fa-map-marker"></i>Avenida Invernada, 1963 - Valinhos</a>
+                <a><i class="mdi mdi-clock"></i>08:00 AM - 06:00 PM</a>
+            </div>
+            <div class="pull-right">
+                <ul class="header_social">
+                    
+                    <li><a href="https://www.facebook.com/venzoseguros/" target="_blank"><i class="fa fa-facebook" style="font-size:18px"></i></a></li>
+
+                    <li><a href="https://www.instagram.com/venzoseguros/" target="_blank"><i class="fa fa-instagram" style="font-size:18px"></i></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="main_menu_area">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.html"><img src="img/logo.png" alt=""></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SEGUROS</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="garantia.html">GARANTIA</a></li>
+                                    <li><a href="judicial.html">GARANTIA JUDICIAL</a></li>
+                                    <li><a href="recursal.html">GARANTIA JUDICIAL DEPÓSITO RECURSAL</a></li>
+                                    <li><a href="aluguel.html">ALUGUEL</a></li>
+                                    <li><a href="equipamentos.html">MÁQUINAS E EQUIPAMENTOS</a></li>
+                                    <li><a href="engenharia.html">RISCOS DE ENGENHARIA</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="cotacao.html">Solicitar Cotação</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+    </div>
+</header>
+<!--================Header Area =================-->
+
+<!-- ##### Contact Area Start ##### -->
+<section class="contact-area section-padding-100-0">
+
+    <!-- ##### Google Maps ##### -->
+    <div class="map-area">
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://maps.google.com/maps?q=Avenida%20Invernada%2C%201963%20Parque%20Nova%20Su%C3%AD%C3%A7a&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+        <!-- Contact Area -->
+        <div class="contact---area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <!-- Contact Area -->
+                        <div class="contact-form-area contact-page">
+                            <h3 class="mb-50">Faça uma cotação</h3>
+
+                            <form action="script.php" method="post">
+                               <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+												<p>NOME:</p>
+                                                <input type="text" name="nome" class="form-control" id="name" required placeholder="Seu Nome">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+												<p>E-MAIL:</p>
+                                                <input type="email" name="email" class="form-control" id="email" required placeholder="Seu E-mail">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+												<p>SEGURO:</p>
+												<select type="text" name="assunto" class="form-control" id="subject" placeholder="Assunto" required>
+													<option value="">Selecione o seguro</option>
+													<option value="Seguro garantia">Seguro garantia</option>
+													<option value="Seguro garantia judicial">Seguro garantia judicial</option>
+													<option value="Seguro garantia judicial depósito recursal">Seguro garantia judicial depósito recursal</option>
+													<option value="Seguro aluguel">Seguro aluguel</option>
+													<option value="Seguro máquina e equipamentos">Seguro máquina e equipamentos</option>
+													<option value="Seguro riscos de engenharia">Seguro riscos de engenharia</option>
+												</select>
+                                            </div>
+                                        </div>
+										<div class="col-lg-6">
+                                            <div class="form-group">
+												<p>TELEFONE:</p>
+                                                <input type="text" name="telefone" class="form-control" id="telefone" maxlength="15" required placeholder="(00) 00000-0000">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+											<p>DESCRIÇÃO DA COTAÇÃO:</p>
+                                            <div class="form-group">
+                                                <textarea name="mensagem" class="form-control" id="message" cols="30" rows="10" required placeholder="Sua Mensagem"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <input class="btn credit-btn mt-30" type="submit" value=Enviar name="submit">
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Contact Area End ##### -->
+
+<!--================Address Area =================-->
+<section class="address_area">
+    <div class="container">
+        <div class="row address_inner">
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="media-left">
+                        <img src="img/icon/place-icon.png" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h4>Endereço do escritório :</h4>
+                        <h5>Avenida Invernada, 1963 - Valinhos</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" style="width: 20%;">
+                <div class="media">
+                    <div class="media-left">
+                        <img src="img/icon/phone-icon.png" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h5>(19) 3929-9801</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="media-left">
+                        <img src="img/icon/inbox-icon.png" alt="">
+                    </div>
+                    <div class="media-body">
+                        <h5>atendimento@venzoseguros.com.br</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Address Area =================-->
+
+<!--================Footer Area =================-->
+<footer class="footer_area">
+    
+    <div class="footer_copy_right">
+        <div class="container">
+            <h4>Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                All rights reserved | by <a target="_blank">Braiton Andrade</a></h4>
+        </div>
+    </div>
+</footer>
+<!--================End Footer Area =================-->
+
+<script src="scripts/jquery.js"></script>
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/meiomask.js"></script>
+<script src="scripts/MenuHome.js" type="text/javascript"></script>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-2.2.4.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Rev slider js -->
+<script src="vendors/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="vendors/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="vendors/revolution/js/extensions/revolution.extension.video.min.js"></script>
+<script src="vendors/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="vendors/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+<script src="vendors/isotope/isotope.pkgd.min.js"></script>
+<script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="vendors/counterup/waypoints.min.js"></script>
+<script src="vendors/counterup/jquery.counterup.min.js"></script>
+<script src="vendors/flex-slider/jquery.flexslider-min.js"></script>
+
+<!--gmaps Js-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJQIQxjOsgziRUcg86j5-r41nRG6JP-mU"></script>
+<script src="js/gmaps.min.js"></script>
+
+<script src="js/theme.js"></script>
+</body>
+</html>

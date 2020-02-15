@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "errorBeacon": "bam.nr-data.net",
+            "licenseKey": "5414bdcb56",
+            "applicationID": "193944460",
+            "transactionName": "NlBUZ0VRD0IFABULXg8ae2V0HzJUAxYTDUIiWlhHRV8NXQERTjFUBkBEXHBRE1AKFwgD",
+            "queueTime": 0,
+            "applicationTime": 3,
+            "agent": "",
+            "atts": ""
+        }
+    </script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1130.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Venzo">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <title>Venzo</title>
+    <script async="" src="./v_files/js"></script>
+
+    <!-- Icon css link -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Venzo">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-21297055-8"></script>
+    <script src="./v_files/modernizr"></script>
+
+    <!--Sobre css-->
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/lity.min.css">
+    <link rel="stylesheet" href="css/essential-addons-cs.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="css/renew2.css">
+    <link rel="stylesheet" href="css/renew3.css">
+    <link rel="stylesheet" href="css/style3.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Rev slider css -->
+    <link href="vendors/revolution/css/settings.css" rel="stylesheet">
+    <link href="vendors/revolution/css/layers.css" rel="stylesheet">
+    <link href="vendors/revolution/css/navigation.css" rel="stylesheet">
+    <link href="vendors/animate-css/animate.css" rel="stylesheet">
+    <link href="vendors/owl-carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Extra plugin css -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background-color: #bdc3c7;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #95a5a6;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7f8c8d;
+        }
+    </style>
+
+</head>
+
+<body style="">
+    <div class="se-pre-con" style="display: none;"></div>
+    <!--================Header Area =================-->
+    <header class="main_header_area">
+        <div class="header_top_area">
+            <div class="container">
+                <div class="pull-left">
+                    <a><i class="fa fa-phone"></i>(19) 3929-9801</a>
+                    <a><i class="fa fa-map-marker"></i>Avenida Invernada, 1963 - Valinhos</a>
+                    <a><i class="mdi mdi-clock"></i>08:00 AM - 06:00 PM</a>
+                </div>
+                <div class="pull-right">
+                    <ul class="header_social">
+                        <li><a href="https://www.facebook.com/venzoseguros/" target="_blank"><i class="fa fa-facebook" style="font-size:18px"></i></a></li>
+
+                        <li><a href="https://www.instagram.com/venzoseguros/" target="_blank"><i class="fa fa-instagram" style="font-size:18px"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_menu_area">
+            <div class="container">
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="home.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li class="dropdown submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: #daa520;">SEGUROS</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="garantia.html">GARANTIA</a></li>
+                                    <li><a href="judicial.html">GARANTIA JUDICIAL</a></li>
+                                    <li><a href="recursal.html">GARANTIA JUDICIAL DEPÓSITO RECURSAL</a></li>
+                                    <li><a href="aluguel.html">ALUGUEL</a></li>
+                                    <li><a href="equipamentos.html">MÁQUINAS E EQUIPAMENTOS</a></li>
+                                    <li><a href="engenharia.html">RISCOS DE ENGENHARIA</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="cotacao.html">Solicitar Cotação</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!--================End Header Area =================-->
+
+    <div class="body-content" style="min-height: 452px;">
+        <div class="conteudoBranco secao areas">
+            <div class="container pt-md-5 pb-5">
+                <div class="row pt-5 pb-5">
+                    <div class="col-md-5 align-content-center align-self-center">
+                        <div class="border-right-primary pb-5 pt-5 mr-4">
+                            <h2 class="textColorOrange">
+                        O que é o Seguro<br>Riscos de Engenharia?
+                    </h2>
+                        </div>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <div class="pl-md-3">
+                            <p>
+                                Seguro que garante indenização de prejuízos de acidentes ocorridos durante o período de execução de obras e/ou instalação de máquinas e equipamentos novos.
+                            </p>
+                            <div class="clear"></div>
+                            <a class="get_btn" href="cotacao.html" style="color: #444444;">Solicitar Cotação</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudoCinzaClaro secao areas">
+            <div class="container">
+                <div class="row pt-5 pb-5">
+                    <div class="col">
+                        <h2 class="textColorOrange font-weight-bold text-center">Porque contratar um Seguro Riscos de Engenharia?</h2>
+                    </div>
+                </div>
+
+                <div class="row pt-5 pb-5">
+                    <div class="col-md-4 text-center">
+                        <div class="p-2">
+                            <img src="images/protecao.svg" class="home-reasons-icon mb-4">
+
+                            <h5 class="textColorOrange">Segurança</h5>
+                            <p>
+                                Resguarda a empresa de despesas extraordinárias que podem surgir com danos imprevisíveis durante obra civil, instalação e montagem de estruturas ou equipamentos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-2">
+                            <img src="images/icon_safe_laranja.svg" class="home-reasons-icon mb-4">
+
+                            <h5 class="textColorOrange">Economia</h5>
+                            <p>
+                                Custo baixo e cobertura ampla
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="p-2">
+                            <img src="images/icon_ampulheta_laranja.svg" class="home-reasons-icon mb-4">
+
+                            <h5 class="textColorOrange">Tranquilidade</h5>
+                            <p>
+                                Prazo curto para indenização.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudoLaranja secao areas">
+            <div class="container pt-5 pb-5">
+                <div class="row">
+                    <div class="col-md-4 align-self-center text-left text-md-left mb-5">
+                        <h2 class="textColorWhite font-weight-bold">Como funciona o Seguro Riscos de Engenharia</h2>
+                        <p class="textColorWhite pt-4">
+                            O Seguro Riscos de Engenharia pode ser contratado por incorporadoras, construtoras, empreiteiras e proprietários de imóveis em construção ou reforma. Entenda ao lado as aplicações deste seguro.
+                        </p>
+
+                        <a class="get_btn" href="cotacao.html" style="border: 2px solid #ffffff;">Solicitar Cotação</a>
+                    </div>
+
+                    <div class="col-md-8 pl-5">
+                        <div class="row border-bottom-primary-light pb-5 mb-5">
+                            <div class="col-md-12 col-xs-12 text-left">
+                                <h4 class="textColorWhite font-weight-bold"><img src="images/predio.svg" class="mb-4" style="height: 70px; margin-right:15px;"> Tomador</h4>
+                            </div>
+                            <div class="col-md-9 col-xs-12 align-self-center">
+                                <p class="textColorWhite mb-0">
+                                    Edifícios residenciais e comerciais, casas, escolas, supermercados, shopping centers, igrejas, hospitais, centros de distribuição, galpões comerciais e industriais, fábricas, silos, torres, reforma de lojas e demais projetos análogos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border-bottom-primary-light pb-5 mb-5">
+                            <div class="col-md-12 col-xs-12 text-left">
+                                <h4 class="textColorWhite font-weight-bold"><img src="images/via.svg" class="mb-4" style="height: 70px; margin-right:15px;"> Segurado</h4>
+                            </div>
+                            <div class="col-md-9 col-xs-12 align-self-center">
+                                <p class="textColorWhite mb-0">
+                                    Rodovias, sistemas viários, redes de distribuição de água, coleta de esgoto, sistema de irrigação, aeroportos, obras ferroviárias, dentre outros projetos de infraestrutura.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row border-bottom-primary-light pb-5 mb-5">
+                            <div class="col-md-12 col-xs-12 text-left">
+                                <h4 class="textColorWhite font-weight-bold"><img src="images/eng.svg" class="mb-4" style="height: 70px; margin-right:15px;"> Seguradora</h4>
+                            </div>
+                            <div class="col-md-9 col-xs-12 align-self-center">
+                                <p class="textColorWhite mb-0">
+                                    Seguro aplicado em processos de instalação e montagem de máquinas e equipamentos de qualquer natureza.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudoBranco secao areas">
+            <div class="container pt-5 pb-5">
+                <div class="row pt-5 pb-5">
+                    <div class="col col-xs-12">
+                        <h2 class="textColorOrange font-weight-bold text-center">Coberturas oferecidas pela Venzo</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <h5 class="textColorOrange">Cobertura básica</h5>
+                        <p>A cobertura básica para obras civis, instalação e montagem cobre os seguintes eventos: </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <ul class="check-list mt-4">
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Danos decorrentes de erro de execução;
+                            </li>
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Defeitos e inadequações de materiais;
+                            </li>
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Danos inerentes à construção, instalação e montagem;
+                            </li>
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Incêndio e explosão;
+                            </li>
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Furto qualificado;
+                            </li>
+                            <li class="check-list-title mb-2 text-small">
+                                <b>● </b>Riscos da natureza (vendaval, inundação, raios, desmoronamento, terremoto, gelo, geada).
+
+                            </li>
+                        </ul>
+                    </div>
+
+                    <hr class="mt-5 mb-5">
+
+                    <div class="row">
+                        <div class="col col-xs-12">
+
+                            <br />
+                            <h5 class="textColorOrange">Coberturas adicionais</h5>
+                            <p>
+                                Coberturas que podem ser contratadas em complemento à cobertura básica e que oferecem ainda mais segurança e tranquilidade à você:
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-xs-12">
+                            <ul class="check-list mt-4">
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Despesas extraordinárias</span> - Para despesas com adicionais noturnos, trabalhos realizados nos fins de semana e feriados, quando há sinistro indenizável;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Tumultos</span> - Danos materiais decorrentes de tumultos, greves e locautes;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Manutenção</span> - Cobre danos materiais ao objeto do seguro, ocorridos durante período de manutenção;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Despesas de desentulho</span> - Garante a indenização das despesas com desentulho, após a ocorrência de sinistro indenizável;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Equipamentos móveis e estacionários</span> - Danos de causas externas aos equipamentos a serviço da construção e/ou instalação e montagem;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Obras concluídas</span> - Cobre danos materiais causados a partes da obra quando finalizadas;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Riscos do fabricante</span> - Cobre danos consequentes de erros de projeto e defeitos de materiais em instalação e montagem;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Danos em consequência do erro de projeto</span> - Garantia para danos causados por erros de projetos em obras civis;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Responsabilidade civil geral e cruzada</span> - Cobertura de danos materiais e corporais eventualmente causados a terceiros;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Honorário de peritos</span> - Despesas com peritos contratados pelo segurado em função de sinistro coberto pela apólice;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Propriedades circunvizinhas</span> - Cobre danos materiais a outros bens de propriedade do segurado ou bens de terceiros sob a sua guarda, custódia ou controle, que estejam no canteiro de obra;
+                                </li>
+                                <li class="check-list-title mb-4 text-small">
+                                    <b>● </b><span class="textColorOrange">Salvamento e contenção de sinistros</span> - Verba reservada para situações de sinistro iminente e para salvaguarda e redução de perdas nos bens segurados.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+            
+    </div>
+
+	<div class="conteudoBranco secao areas">
+            <div class="container">
+                <div id="Faqs">
+                    <div id="bgFaqs" class="conteudoBranco">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <h2 class="textColorOrange font-weight-bold text-center">Dúvidas frequentes sobre o Seguro Riscos de Engenharia</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-xs-12">
+                                <div class="panel-group accordion" role="tablist" aria-multiselectable="true">
+        
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab">
+                                            <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq1" class="" aria-expanded="true">
+                                            <span class="glyphicon glyphicon-info-sign"></span>Quem pode contratar o Seguro Riscos de Engenharia da Pottencial?
+                                        </a>
+                                    </h4>
+                                        </div>
+                                        <div id="faq1" class="panel-collapse collapse in" role="tabpanel" aria-expanded="true" style="">
+                                            <div class="panel-body">
+                                                <p>
+                                                    O Seguro Riscos de Engenharia pode ser contratado por incorporadoras,
+                                                    construtoras, empreiteiras e proprietários de imóveis em construção ou
+                                                    reforma
+                                                </p>
+        
+                                                <p>
+                                                    O cliente deve contar com a ajuda de um corretor para escolher as
+                                                    coberturas mais adequadas à sua construção.
+                                                </p>
+                                            </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq2" class="collapsed" aria-expanded="false">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>Existe alguma cobertura que proteja terceiros envolvidos na construção?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="faq2" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                                            
+											<div class="panel-body">
+                                                <p>Sim, a cobertura de Responsabilidade Civil Geral e Cruzada.</p>
+                                            </div>
+											
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq3" class="collapsed" aria-expanded="false">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>É possível contratar o Seguro Riscos de Engenharia para máquinas ou equipamentos alugados?
+                                            </h4>
+                                        </div>
+                                        <div id="faq3" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                                            
+											<div class="panel-body">
+                                                <p>Sim, contanto que existe um vínculo contratual entre o proprietário do equipamento e o contratante do seguro.</p>
+                                    </div>
+											
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq5" class="collapsed" aria-expanded="false">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>Quais informações as seguradoras solicitam para contratação do seguro de riscos de engenharia?
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="faq5" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                                <div class="panel-body">
+                                                        <p>Uma seguradora precisa de informações de seu projeto, como:</p>
+                                                        <ul>
+                                                            <li><b>● </b>Custo total estimado</li>
+                                                            <li><b>● </b>Duração total do projeto</li>
+                                                            <li><b>● </b>Local da construção</li>
+                                                            <li><b>● </b>Descrição completa (plantas, esboços, especificações).</li>
+                                                            <li><b>● </b>Cronograma físico financeiro</li>
+                                                        </ul>
+                                                    </div>
+											
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq6" class="collapsed" aria-expanded="false">
+                                                    <span class="glyphicon glyphicon-info-sign"></span>O que é prêmio de seguro?
+                                            </h4>
+                                        </div>
+                                        <div id="faq6" class="panel-collapse collapse" role="tabpanel" aria-expanded="false">
+                                            <div class="panel-body">
+                                                <p>O prémio de seguro é a prestação paga pelo segurado, para a contratação do seguro.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+									
+									<div class="panel panel-default">
+                                <div class="panel-heading" role="tab">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent=".accordion" href="#faq7" class="collapsed" aria-expanded="false">
+                                            <span class="glyphicon glyphicon-plus-sign"></span>O que é o sinistro do seguro?
+                                    </h4>
+                                </div>
+                                <div id="faq7" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <p>Sinistro é o evento em que o bem do segurado sofre dano ou prejuízo.</p>
+                                    </div>
+                                </div>
+                            </div>
+									
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Contact Area End ##### -->
+
+    <!--================Address Area =================-->
+    <section class="address_area">
+        <div class="container">
+            <div class="row address_inner">
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="img/icon/place-icon.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h4 style="
+            margin: 0px;
+        ">Endereço do escritório :</h4>
+                            <h5 style="
+            margin: 0px;
+        ">Avenida Invernada, 1963 - Valinhos</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="width: 20%;">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="img/icon/phone-icon.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h5 style="
+            margin: 0px;
+        ">(19) 3929-9801</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="media">
+                        <div class="media-left">
+                            <img src="img/icon/inbox-icon.png" alt="">
+                        </div>
+                        <div class="media-body">
+                            <h5 style="
+            margin: 0px;
+        ">atendimento@venzoseguros.com.br</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Address Area =================-->
+
+    <!--================Footer Area =================-->
+    <footer class="footer_area">
+
+        <div class="footer_copy_right">
+            <div class="container">
+                <h4>Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                        All rights reserved | by <a target="_blank">Braiton Andrade</a></h4>
+            </div>
+        </div>
+    </footer>
+    <!--================End Footer Area =================-->
+
+    </div>
+
+    <script src="./v_files/jquery"></script>
+
+    <script src="./v_files/bootstrap"></script>
+
+    <script src="./v_files/scripts"></script>
+
+    <script src="./v_files/meiomask"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('a[href*="#faq1"]').trigger('click');
+        });
+    </script>
+
+    <script src="./v_files/modalCondicoesGerais.js.download" type="text/javascript"></script>
+
+</body>
+
+</html>
